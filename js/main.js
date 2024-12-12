@@ -61,8 +61,9 @@ async function getcity() {
   }
   getcity()
 async function getCurrentApi(land) {
-    var x = await (await fetch(`http://api.weatherapi.com/v1/forecast.json?key=f8785782be3945b0b43174702241112&q=${land}&days=7`)).json()
-    
+    var y = await  fetch(`http://api.weatherapi.com/v1/forecast.json?key=f8785782be3945b0b43174702241112&q=${land}&days=7`);
+    var x = await y.json();
+
      city.innerHTML= x.location.name
      currentTemp.innerHTML = x.current.temp_c 
      currCondIcon.setAttribute("src",`https:${x.current.condition.icon}`)
