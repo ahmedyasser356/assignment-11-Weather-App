@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div class="py-5 my-navbar">
+             <div class="nav-top">
+                <a class="logo" href="#">
+                    <img src="imgs/logo.png" alt="" />
+                    <div class="right-logo">
+                    <p class="  logo-1">Weather</p>
+                    <p class="mb-0 logo-2">tagline goes here</p>
+                    </div></a>
+                    <div class="bars">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+             </div>
+            <div class="nav-list">
+                <ul>
+                    <li class=" item position-relative item-b" id="active"><a href="#">Home</a></li>
+                    <li class=" item position-relative item-b"><a href="#">News</a></li>
+                    <li class=" item position-relative item-b"><a href="#">Live cameras</a></li>
+                    <li class=" item position-relative item-b"><a href="#">Photos</a></li>
+                    <li class=" item position-relative"><a href="#">Contact</a></li>   
+                </ul>
+            </div>   
+        </div>
+      </div>
+    </nav>
+    <section class="home-section py-5">
+        <div class="container">
+           <div class="home-content ">
+            <div class="search-input">
+                <input type="text" oninput="search(this.value)" placeholder="Find your location...">
+                <button>Find</button>
+            </div>
+            
+           </div>
+           <div class="cards row g-0 ">
+            <div class="col-lg-4 card-item-1">
+             <div class="top-card d-flex   justify-content-between">
+                 <p id="todayOfWeek" class="first-day mb-0">Wednesday</p>
+                 <p id="todayDate" class="first-day-date mb-0"></p>
+             </div>
+             <div class="body-card px-3 ">
+              <h4 id="city" class="city py-2" ></h4>
+              <div class="text-white mb-3 middle d-flex justify-content-between">
+                 <h1  class="display-3 fw-bold"><span id="currentTemp"></span><span class="o">o</span>C</h1>
+                 <img id="currCondIcon" src="" alt="">
+             </div>
+             <p id="currentCloud" class="cloud"></p>
+             <div class="bottom d-flex pb-4 ">
+                 <img src="imgs/icon-umberella.png" alt="">
+                 <p class="mb-0 me-4">20%</p>
+                 <img src="imgs/icon-wind.png" alt="">
+                 <p  class="mb-0 me-4"><span id="windK"></span>km/h</p>
+                 <img src="imgs/icon-compass.png" alt="">
+                 <p class="mb-0">East</p>
+             </div>
+             </div>
+            </div>
+            <div class="col-lg-4 card-item-2">
+                <div id="secondDay" class="top-card-2 text-center text-white"><p></p></div>
+                <div class="body-card-2 py-4 d-flex flex-column align-items-center">
+                   <img id="secondIcon" src="">
+                   <p class="pa-1"><span id="secondMaxTemp"></span><span class="o2">o</span>C</p>
+                   <p class="pa-2"><span id="secondMinTemp"></span><span class="o2">o</span></p>
+                   <p class="pa-3" id="secondCloud"></p>
+                </div>
+            </div>
+            <div class="col-lg-4 card-item-2">
+                <div id="thirdDay" class="top-card-2 top-card-3 text-center text-white"><p></p></div>
+                <div class="body-card-2 body-card-3 py-4 d-flex flex-column align-items-center">
+                   <img id="thirdIcon" src="">
+                   <p class="pa-1"><span id="thirdMaxTemp"></span><span class="o2">o</span>C</p>
+                   <p class="pa-2"><span id="thirdMinTemp"></span><span class="o2">o</span></p>
+                   <p class="pa-3" id="thirdCloud"> </p>
+                </div>
+            </div>
+           </div>
+        </div>
+    </section>
+    <footer class="py-5">
+        <div class="container">
+            <div class="footer-box g-lg-0 g-3 row">
+                <div class="left-footer row row-gap-3  ">
+                     <div class="col-lg-8">
+                        <div class="email-input">
+                            <input type="text" placeholder="Enter your email to subscribe....">
+                            <button>Subscribe</button>
+                        </div>
+                     </div>
+
+                    <div class="icons col-lg-4 d-flex justify-content-lg-center gap-2">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-google-plus-g"></i>
+                        <i class="fa-brands fa-pinterest"></i>
+                    </div>
+                </div>
+                <div class=" mb-2 ">
+                    <p class="footer-word ms-2">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
