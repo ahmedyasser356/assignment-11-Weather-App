@@ -53,7 +53,13 @@ if(day == 5){
 thirdDay.innerHTML = (days[day+2])
 }
  
-
+async function getcity() {
+    var x= await  fetch("https://ipapi.co/json/")
+    var data = await x.json()
+       data.city.toLowerCase()
+       getCurrentApi(data.city.toLowerCase())
+  }
+  getcity()
 async function getCurrentApi(land) {
     var x = await (await fetch(`http://api.weatherapi.com/v1/forecast.json?key=f8785782be3945b0b43174702241112&q=${land}&days=7`)).json()
     
@@ -78,12 +84,6 @@ function search(land){
     getCurrentApi(land)
 }
 
-async function getcity() {
-    var x= await  fetch("https://ipapi.co/json/")
-    var data = await x.json()
-       data.city.toLowerCase()
-       getCurrentApi(data.city.toLowerCase())
-  }
-  getcity()
+
  
 
