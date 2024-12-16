@@ -31,12 +31,12 @@ const todayDate = document.getElementById("todayDate")
 const secondDay = document.getElementById("secondDay")
 const thirdDay = document.getElementById("thirdDay")
 
-var date = new Date()
-var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-var days =     ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+const date = new Date()
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+const days =     ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
  
- var month =  date.getMonth();
- var day   =  date.getDay();
+ const month =  date.getMonth();
+ const day   =  date.getDay();
   
 
 todayDate.innerHTML = (date.getDate().toString())+(months[month])
