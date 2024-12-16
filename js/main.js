@@ -1,7 +1,7 @@
 
 
-var barsBtn = document.querySelector(".bars")
-var navList = document.querySelector(".nav-list")
+const barsBtn = document.querySelector(".bars")
+const navList = document.querySelector(".nav-list")
 barsBtn.addEventListener("click",function(){
 if(navList.style.display == "block"){
     navList.style.display = "none"
@@ -10,26 +10,26 @@ if(navList.style.display == "block"){
 }
 })
 
-var currentTemp = document.getElementById("currentTemp")
-var city = document.getElementById("city")
-var currentCloud = document.getElementById("currentCloud")
-var currCondIcon = document.getElementById("currCondIcon")
-var windK = document.getElementById("windK")
+const currentTemp = document.getElementById("currentTemp")
+const city = document.getElementById("city")
+const currentCloud = document.getElementById("currentCloud")
+const currCondIcon = document.getElementById("currCondIcon")
+const windK = document.getElementById("windK")
 
-var secondIcon=document.getElementById("secondIcon")
-var secondMaxTemp=document.getElementById("secondMaxTemp")
-var secondMinTemp=document.getElementById("secondMinTemp")
-var secondCloud=document.getElementById("secondCloud")
+const secondIcon=document.getElementById("secondIcon")
+const secondMaxTemp=document.getElementById("secondMaxTemp")
+const secondMinTemp=document.getElementById("secondMinTemp")
+const secondCloud=document.getElementById("secondCloud")
 
-var thirdIcon=document.getElementById("thirdIcon")
-var thirdMaxTemp=document.getElementById("thirdMaxTemp")
-var thirdMinTemp=document.getElementById("thirdMinTemp")
-var thirdCloud=document.getElementById("thirdCloud")
+const thirdIcon=document.getElementById("thirdIcon")
+const thirdMaxTemp=document.getElementById("thirdMaxTemp")
+const thirdMinTemp=document.getElementById("thirdMinTemp")
+const thirdCloud=document.getElementById("thirdCloud")
 
-var todayOfWeek = document.getElementById("todayOfWeek")
-var todayDate = document.getElementById("todayDate")
-var secondDay = document.getElementById("secondDay")
-var thirdDay = document.getElementById("thirdDay")
+const todayOfWeek = document.getElementById("todayOfWeek")
+const todayDate = document.getElementById("todayDate")
+const secondDay = document.getElementById("secondDay")
+const thirdDay = document.getElementById("thirdDay")
 
 var date = new Date()
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -54,15 +54,15 @@ thirdDay.innerHTML = (days[day+2])
 }
  
 async function getcity() {
-    var x= await  fetch("https://ipapi.co/json/")
-    var data = await x.json()
+    const x= await  fetch("https://ipapi.co/json/")
+    const data = await x.json()
        data.city.toLowerCase()
        getCurrentApi(data.city.toLowerCase())
   }
   getcity()
 async function getCurrentApi(land) {
-    var y = await  fetch(`http://api.weatherapi.com/v1/forecast.json?key=f8785782be3945b0b43174702241112&q=${land}&days=7`);
-    var x = await y.json();
+    const y = await  fetch(`http://api.weatherapi.com/v1/forecast.json?key=f8785782be3945b0b43174702241112&q=${land}&days=7`);
+    const x = await y.json();
 
      city.innerHTML= x.location.name
      currentTemp.innerHTML = x.current.temp_c 
