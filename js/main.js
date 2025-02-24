@@ -1,5 +1,3 @@
-
-
 const barsBtn = document.querySelector(".bars")
 const navList = document.querySelector(".nav-list")
 barsBtn.addEventListener("click",function(){
@@ -57,11 +55,15 @@ async function getcity() {
     const x= await  fetch("https://ipapi.co/json/")
     const data = await x.json()
        data.city.toLowerCase()
-       getCurrentApi(data.city.toLowerCase())
+       getCurrentApi(data.country_capital.toLowerCase())
   }
+
+
+
   getcity()
 async function getCurrentApi(land) {
-    const y = await  fetch(`http://api.weatherapi.com/v1/forecast.json?key=f8785782be3945b0b43174702241112&q=${land}&days=7`);
+   const y = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=f8785782be3945b0b43174702241112&q=${land}&days=7`);
+
     const x = await y.json();
 
      city.innerHTML= x.location.name
